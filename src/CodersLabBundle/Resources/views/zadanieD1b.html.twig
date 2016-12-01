@@ -1,0 +1,11 @@
+<html>
+<head>
+
+</head>
+<body>
+{% for author in authors %}
+    <h1>{{ author.name }} {{ author.surname }}</h1>
+    <p><a href="/showAuthor/{{ author.id }}">Info o autorze</a></p>
+{% endfor %}
+</body>
+</html>

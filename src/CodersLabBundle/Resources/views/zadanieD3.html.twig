@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+<form action="/createBook" method="POST">
+    <p><label>Title <input type="text" name="title"></label></p>
+    <p><label>Description <input type="text" name="description"></label></p>
+    <p><label>Rating <input type="number" name="rating"</label></p>
+    <p><label for="author">Autor:</label>
+    <ul>
+        {% for author in authors %}
+            <li><input type="radio" name="author" value="{{ author.id }}"> {{ author.name }}</li>
+        {% endfor %}
+    </ul></p>
+    <input type="submit"/>
+</form>
+</body>
+</html>

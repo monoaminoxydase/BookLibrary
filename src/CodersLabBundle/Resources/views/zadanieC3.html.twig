@@ -1,0 +1,16 @@
+<html>
+<head>
+
+</head>
+<body>
+{% if book is null %}
+    Nie znaleziono tej książki!
+{% else %}
+    <h1>{{ book.title }}</h1>
+    <p>{{ book.id }}</p>
+    <p>{{ book.description }}</p>
+    <p>{{ book.rating }}</p>
+    <p><a href="/showAuthor/{{ book.author.id }}">{{ book.author.name }} {{ book.author.surname }}</a></p>
+{% endif %}
+</body>
+</html>

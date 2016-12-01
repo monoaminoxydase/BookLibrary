@@ -1,0 +1,15 @@
+<html>
+<head>
+
+</head>
+<body>
+
+{% for book in books %}
+    <h1>{{ book.title }}</h1>
+    <p><a href="/showBook/{{ book.id }}">Info</a></p>
+{% else  %}
+    <p>Podana książka nie istnieje</p>
+{% endfor %}
+
+</body>
+</html>

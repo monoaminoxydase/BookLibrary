@@ -1,0 +1,28 @@
+<html>
+<head>
+
+</head>
+<body>
+{% if author is null %}
+    Nie znaleziono tego autora!
+{% else %}
+    <h1>{{ author.name }} {{ author.surname }}</h1>
+    <p>{{ author.id }}</p>
+    <p>{{ author.description }}</p>
+
+
+    <p>Ilość książek: {{ author.books | length }}</p>
+
+    <ul>
+        {% for book in author.books %}
+
+            <p><a href="/showBook/{{ book.id }}"><li>{{ book.title }}</li></a></p>
+
+        {% endfor %}
+
+    </ul>
+
+
+{% endif %}
+</body>
+</html>
